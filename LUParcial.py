@@ -6,11 +6,9 @@ import sys
 def pivoteONo(A, n, L, U):
   
     print(f'La determinante de la matriz A es {np.linalg.det(A)}')    
-    '''
     if not invertible(A):
         print('La matriz A ingresada no es invertible. Se intentará utilizar pivote:')
-        pivot(A, n, L, U)
-    '''    
+        pivot(A, n, L, U)   
     #else:
     for i in range(n):
             L[i, i] = 1.0       
@@ -110,17 +108,17 @@ def puedoResolver(A, b):
         resolver_lu(A, b)
     else:
         print("El SEL ingresado no es cuadrado. No sera posible implementar el metodo de descomposicion de LU.")
-'''     
+    
 A = np.array([[2, 3, 1],
               [4, 7, 5],
               [6, 2, 3]])
 b = np.array([1, 1, 6])
+
+
 '''
-
-
 A = np.array([[1, 2, 3],
               [4, 5, 6],
               [7, 8, 9]])
 b = np.array([4, 6, 8])
-
+'''
 puedoResolver(A, b)
